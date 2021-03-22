@@ -13,7 +13,11 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+# add .zshfile config to .zshfile used in zprezto
+cat ./zshrc >> ~/.zshrc
+
 # install poweline font
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts && ./install.sh
 cd .. && rm -rf fonts
+
