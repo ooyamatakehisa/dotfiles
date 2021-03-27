@@ -21,3 +21,6 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts && ./install.sh
 cd .. && rm -rf fonts
 
+# add config for github
+git config --global user.name "ooyamatakehisa"
+git config --global user.email "shinobu_take_kobukuro5296@yahoo.co.jp"
