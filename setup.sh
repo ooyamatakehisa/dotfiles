@@ -3,6 +3,8 @@
 # change default shell to zsh
 chsh -s /bin/zsh
 
+xcode-select --install
+
 # create symbolic link
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
