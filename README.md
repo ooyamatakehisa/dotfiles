@@ -24,4 +24,4 @@ iterm2使えばOKそう？
 - タッチパッドスピードあげる
 - dock小さく
 - spotlightのショートカットをctrl + spaceにかえる
-
+- キーバインド変更 capslock等
