@@ -25,3 +25,4 @@ iterm2使えばOKそう？
 - dock小さく
 - spotlightのショートカットをctrl + spaceにかえる
 - terminalでpreference -> keyboardからoptionをmetakeyに指定
+- キーバインド変更 capslock等
