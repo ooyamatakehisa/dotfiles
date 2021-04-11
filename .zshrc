@@ -20,6 +20,7 @@ alias gp="git push origin"
 alias gm="git merge"
 alias -g C="| pbcopy"
 alias -g G="| grep"
+alias rld="source ~/.zshrc"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/takehisa/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/takehisa/google-cloud-sdk/path.zsh.inc'; fi
