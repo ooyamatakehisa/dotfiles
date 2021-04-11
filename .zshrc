@@ -2,7 +2,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+function move_to_trash () {
+  for file in $@
+  do
+    echo /home/ooyama/trash/${file}_`now`
+    mv -f $file /home/ooyama/trash/${file}_`now`
+  done
+}
+
 # Customize to your needs...
+alias now='date "+%Y%m%d_%H%M"'
+alias cnt="ls | wc -w"
+alias p="pwd"
+alias rm="move_to_trash"
 alias ga="git add"
 alias gc="git commit -m"
 alias gs="git status"
