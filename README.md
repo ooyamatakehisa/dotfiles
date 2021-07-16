@@ -18,6 +18,7 @@ iterm2使えばOKそう？
 - slack
 - chrome 
 - line
+- google日本語入力
 
 # 設定等
 - タップでクリック
@@ -25,4 +26,4 @@ iterm2使えばOKそう？
 - dock小さく
 - spotlightのショートカットをctrl + spaceにかえる
 - terminalでpreference -> keyboardからoptionをmetakeyに指定
-- キーバインド変更 capslock等
+- キーバインド変更 環境設定 -> 入力ソース -> capslock等

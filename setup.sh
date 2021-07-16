@@ -28,3 +28,4 @@ cd .. && rm -rf fonts
 # add config for github
 git config --global user.name "ooyamatakehisa"
 git config --global user.email "shinobu_take_kobukuro5296@yahoo.co.jp"
+git config --global core.editor vim
