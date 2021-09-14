@@ -14,7 +14,7 @@ function move_to_trash () {
 alias now='date "+%Y%m%d_%H%M"'
 alias cnt="ls | wc -w"
 alias p="pwd"
-alias rm="move_to_trash"
+# alias rm="move_to_trash"
 alias ga="git add"
 alias gc="git commit -m"
 alias gs="git status"
