@@ -7,6 +7,9 @@ chsh -s /bin/zsh
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# install tmux
+brew install tmux
+
 # create symbolic link
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
@@ -31,3 +34,7 @@ cd .. && rm -rf fonts
 git config --global user.name "ooyamatakehisa"
 git config --global user.email "ooyamatakehisa@gmail.com"
 git config --global core.editor vim
+
+mkdir ~/.ssh
+mv ./config ~/.ssh
+
