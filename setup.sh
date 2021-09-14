@@ -3,7 +3,9 @@
 # change default shell to zsh
 chsh -s /bin/zsh
 
+# install homebrew
 xcode-select --install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # create symbolic link
 ln -s ~/dotfiles/.vimrc ~/.vimrc
