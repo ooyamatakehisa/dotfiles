@@ -10,6 +10,9 @@ xcode-select --install
 # install tmux
 brew install tmux
 
+# install github command line tool
+brew install gh
+
 # create symbolic link
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
