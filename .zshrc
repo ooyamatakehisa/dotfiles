@@ -26,8 +26,13 @@ alias -g C="| pbcopy"
 alias -g G="| grep"
 alias rld="source ~/.zshrc"
 
+# fzf option
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/takehisa/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/takehisa/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/takehisa/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/takehisa/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

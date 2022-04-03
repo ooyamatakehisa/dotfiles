@@ -13,6 +13,9 @@ brew install tmux
 # install github command line tool
 brew install gh
 
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
 # create symbolic link
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
