@@ -20,6 +20,7 @@ $(brew --prefix)/opt/fzf/install
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 # install zprezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -28,8 +29,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
-# add .zshfile config to .zshfile used in zprezto
-cat ./.zshrc >> ~/.zshrc
 
 # install poweline font
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -43,4 +42,3 @@ git config --global core.editor vim
 
 mkdir ~/.ssh
 mv ./config ~/.ssh
-
