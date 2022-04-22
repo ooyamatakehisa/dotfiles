@@ -1,8 +1,15 @@
 #! /bin/zsh
 
-# change default shell to zsh
+# ==============================
+#  change default shell to zsh
+# ==============================
 chsh -s /bin/zsh
 
+
+
+# ==============================
+#  install command line tools
+# ==============================
 # install homebrew
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -10,17 +17,12 @@ xcode-select --install
 # install tmux
 brew install tmux
 
-# install github command line tool
+# install github commnad line tool
 brew install gh
 
+# install fzf
 brew install fzf
 $(brew --prefix)/opt/fzf/install
-
-# create symbolic link
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.vim ~/.vim
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 # install zprezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -30,15 +32,43 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 
-# install poweline font
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts && ./install.sh
-cd .. && rm -rf fonts
 
-# add config for github
+# ==============================
+#  install GUI apps
+# ==============================
+brew install zoom
+brew install docker
+brew install google-chrome
+brew install visual-studio-code
+brew install slack
+brew install google-japanese-ime
+brew install notion
+brew install alfred
+brew install spotify
+
+
+
+# ==============================
+#  github setting
+# ==============================
 git config --global user.name "ooyamatakehisa"
 git config --global user.email "ooyamatakehisa@gmail.com"
 git config --global core.editor vim
 
+
+
+# ==============================
+#  create symbolic link
+# ==============================
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.vim ~/.vim
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+
+
+
+# ==============================
+#  ssh setting
+# ==============================
 mkdir ~/.ssh
 mv ./config ~/.ssh
