@@ -14,13 +14,9 @@ chsh -s /bin/zsh
 xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# install tmux
 brew install tmux
-
-# install github commnad line tool
 brew install gh
-
-# install fzf
+brew install exa
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
