@@ -42,6 +42,9 @@ brew install notion
 brew install alfred
 brew install spotify
 
+brew tap wez/wezterm
+brew install --cask wez/wezterm/wezterm
+
 
 
 # ==============================
