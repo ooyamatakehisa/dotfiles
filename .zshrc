@@ -43,3 +43,4 @@ if [ -f '/Users/takehisa/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/takehi
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/takehisa/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/takehisa/google-cloud-sdk/completion.zsh.inc'; fi
 
+eval "$(starship init zsh)"

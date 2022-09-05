@@ -19,6 +19,7 @@ brew install gh
 brew install exa
 brew install fzf
 $(brew --prefix)/opt/fzf/install
+brew install starship
 
 # install zprezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
