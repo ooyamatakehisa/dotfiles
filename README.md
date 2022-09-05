@@ -21,6 +21,7 @@
 - spotify
 - vscode
 - zoom
+- wezterm
 
 
 # CUI apps to be installed.
@@ -30,12 +31,8 @@
 - powerline fonts
 - tmux
 - zprezto
-
-
-# issue
-macでagnosterの色気持ち悪い問題
-https://github.com/agnoster/agnoster-zsh-theme/issues/72
-iterm2使えばOKそう？
+- starship
+- exa
 
 
 # 自分でぽちぽちするインストール・設定等
@@ -46,3 +43,5 @@ iterm2使えばOKそう？
 - spotlightのショートカットをctrl + spaceにかえる
 - terminalでpreference -> keyboardからoptionをmetakeyに指定
 - キーバインド変更 環境設定 -> 入力ソース -> capslock等
+- https://www.youtube.com/watch?v=rdhPFD2iGIk
+- https://www.youtube.com/watch?v=9YRXpWQHJuc
