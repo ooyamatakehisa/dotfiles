@@ -20,19 +20,19 @@
 - slack
 - spotify
 - vscode
-- zoom
 - wezterm
+- zoom
 
 
 # CUI apps to be installed.
 - brew
+- exa
 - fzf
 - gh (github command line tool)
 - powerline fonts
+- starship
 - tmux
 - zprezto
-- starship
-- exa
 
 
 # 自分でぽちぽちするインストール・設定等
