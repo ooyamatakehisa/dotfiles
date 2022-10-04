@@ -6,7 +6,7 @@
 # What setup.sh does
 - change default shell to `zsh`
 - install apps listed below
-- create symbolic linke to dotfiles in this directory like `.zshrc`
+- create symbolic link to dotfiles in this directory like `.zshrc`
 - configure git user name, email, and default editor
 - create `~/.ssh` directory and copy config file into it
 
