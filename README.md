@@ -29,9 +29,11 @@
 - exa
 - fzf
 - gh (github command line tool)
+- gotop
 - powerline fonts
 - starship
 - tmux
+- tldr
 - zprezto
 
 

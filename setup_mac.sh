@@ -16,10 +16,12 @@ xcode-select --install
 
 brew install tmux
 brew install gh
+brew install gotop
 brew install exa
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 brew install starship
+brew install tldr
 
 # install zprezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
