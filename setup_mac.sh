@@ -20,6 +20,7 @@ brew install tmux
 brew install gh
 brew install gotop
 brew install exa
+brew install bat
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 brew install starship
