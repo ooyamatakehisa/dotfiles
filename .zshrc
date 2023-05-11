@@ -34,6 +34,10 @@ alias la='exa -a --icons --color=always --group-directories-first'  # all files 
 alias ll='exa -l --icons --color=always --group-directories-first'  # long format
 alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
 
+# open github remote repository
+# gh command has "gh browse" subcommand, but it require sign in and doesn't work with gitlab repo.
+alias ogrr="git remote get-url origin | sed -e 's/:/\//' -e 's/\.git$//' -e 's/^git@/https:\/\//' | xargs open -a 'Google Chrome'"
+
 # fzf option
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
