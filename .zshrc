@@ -28,6 +28,7 @@ alias gss="git stash save -u"
 alias -g C="| pbcopy"
 alias -g G="| grep"
 alias rld="source ~/.zshrc"
+alias cpd="rsync -a --info=progress2"
 
 alias ls='exa -al --icons --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --icons --color=always --group-directories-first'  # all files and dirs
