@@ -35,6 +35,7 @@ alias la='exa -a --icons --color=always --group-directories-first'  # all files 
 alias ll='exa -l --icons --color=always --group-directories-first'  # long format
 alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
 alias cat="bat"
+alias usage='du -h -d 1'
 
 # open github remote repository
 # gh command has "gh browse" subcommand, but it require sign in and doesn't work with gitlab repo.
