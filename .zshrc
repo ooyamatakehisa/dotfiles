@@ -10,6 +10,21 @@ function move_to_trash () {
   done
 }
 
+function gbrm () {
+  branch_to_remove=$(git rev-parse --abbrev-ref HEAD)
+  main_branch=$(gb -r | grep HEAD | cut -b 25-)
+
+  echo "=> git checkout $main_branch"
+  git checkout $main_branch
+
+  echo "\n\n=> Remove branch: $branch_to_remove"
+  git branch -D $branch_to_remove
+  git fetch -p
+
+  echo "\n\n=> Update $main_branch"
+  git pull
+}
+
 # Customize to your needs...
 alias now='date "+%Y%m%d_%H%M"'
 alias cnt="ls | wc -w"
@@ -19,12 +34,15 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gs="git status"
 alias gb="git branch"
+alias gbrm="gbrm"
 alias gco="git checkout"
 alias gl="git log --oneline --graph --all -n 12"
 alias gll="git log --oneline --graph --all"
-alias gp="git push origin"
+alias gpo="git push -u origin HEAD"
 alias gm="git merge"
 alias gss="git stash save -u"
+alias gsp="git stash pop"
+alias gsl="git stash list"
 alias -g C="| pbcopy"
 alias -g G="| grep"
 alias rld="source ~/.zshrc"
@@ -40,6 +58,8 @@ alias usage='du -h -d 1'
 # open github remote repository
 # gh command has "gh browse" subcommand, but it require sign in and doesn't work with gitlab repo.
 alias ogrr="git remote get-url origin | sed -e 's/:/\//' -e 's/\.git$//' -e 's/^git@/https:\/\//' | xargs open -a 'Google Chrome'"
+
+alias dpn="docker ps --format '{{.Names}}'"
 
 # fzf option
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
