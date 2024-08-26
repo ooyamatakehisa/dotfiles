@@ -74,23 +74,8 @@ if [ -f '/Users/takehisa/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/takehi
 if [ -f '/Users/takehisa/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/takehisa/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(starship init zsh)"
-# BEGIN env Setup -- Managed by Ansible DO NOT EDIT.
 
-# Setup INDEED_ENV_DIR earlier.
-if [ -z "${INDEED_ENV_DIR}" ]; then
-    export INDEED_ENV_DIR="/Users/toyama/env"
-fi
-
-# Single-brace syntax because this is required in bash and sh alike
-if [ -e "${INDEED_ENV_DIR}/etc/indeedrc" ]; then
-    . "${INDEED_ENV_DIR}/etc/indeedrc"
-fi
-# END env Setup -- Managed by Ansible DO NOT EDIT.
-
-. "/Users/toyama/.indeed-kube-profile"
-export PATH=/Users/toyama/override-command:$PATH
-
-# Created by `pipx` on 2024-04-24 03:58:41
-export PATH="$PATH:/Users/toyama/.local/bin"
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
