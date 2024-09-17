@@ -25,6 +25,10 @@ function gbrm () {
   git pull
 }
 
+function cdf () {
+  cd $(eza -a -h -D --time-style long-iso | fzf --preview="echo user={3} when={4}{5}; ls {-1}")
+}
+
 # Customize to your needs...
 alias now='date "+%Y%m%d_%H%M"'
 alias cnt="ls | wc -w"
@@ -49,17 +53,19 @@ alias -g G="| grep"
 alias rld="source ~/.zshrc"
 alias cpd="rsync -a --info=progress2"
 
-alias ls='exa -al --icons --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --icons --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --icons --color=always --group-directories-first'  # long format
-alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
+alias ls='eza -al --icons --color=always --group-directories-first' # my preferred listing
+alias la='eza -a --icons --color=always --group-directories-first'  # all files and dirs
+alias ll='eza -l --icons --color=always --group-directories-first'  # long format
+alias lt='eza -aT --icons --color=always --group-directories-first' # tree listing
 alias cat="bat"
 alias usage='du -h -d 1'
+alias cdf="cdf"
 
 # open github remote repository
 # gh command has "gh browse" subcommand, but it require sign in and doesn't work with gitlab repo.
 alias ogrr="git remote get-url origin | sed -e 's/:/\//' -e 's/\.git$//' -e 's/^git@/https:\/\//' | xargs open -a 'Google Chrome'"
 alias ogmr='git remote get-url origin | sed -e "s/:/\//" -e "s/\.git$//" -e "s/^git@/https:\/\//" | xargs -I {} open -a "Google Chrome" "{}/-/merge_requests?scope=all&state=all&source_branch=$(git rev-parse --abbrev-ref HEAD)"'
+alias ogpr='git remote get-url origin | sed -e "s/:/\//" -e "s/\.git$//" -e "s/^git@/https:\/\//" | xargs -I {} open -a "Google Chrome" "{}/pulls?q=is:pr+head:$(git rev-parse --abbrev-ref HEAD)"'
 
 alias dpn="docker ps --format '{{.Names}}'"
 

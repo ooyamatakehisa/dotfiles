@@ -19,7 +19,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install tmux
 brew install gh
 brew install gotop
-brew install exa
+brew install eza
 brew install bat
 brew install fzf
 $(brew --prefix)/opt/fzf/install
