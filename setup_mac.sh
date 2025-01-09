@@ -23,7 +23,8 @@ brew install eza
 brew install bat
 brew install fzf
 $(brew --prefix)/opt/fzf/install
-brew install starship
+curl -sS https://starship.rs/install.sh | sh
+
 brew install tldr
 
 # install zprezto
@@ -34,6 +35,7 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 
+brew install neofetch
 
 # ==============================
 #  install GUI apps
