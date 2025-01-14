@@ -47,7 +47,7 @@ brew install visual-studio-code
 brew install slack
 brew install google-japanese-ime
 brew install notion
-brew install alfred
+brew install raycast
 brew install spotify
 
 brew tap wez/wezterm
