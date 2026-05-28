@@ -1,5 +1,7 @@
 #! /bin/zsh
 
+set -e
+
 # ==============================
 #  change default shell to zsh
 # ==============================
@@ -10,7 +12,7 @@ chsh -s /bin/zsh
 # ==============================
 #  install command line tools
 # ==============================
-# sudo apt install tmux
+sudo apt install tmux
 sudo apt install gh
 
 wget https://github.com/xxxserxxx/gotop/releases/download/v4.2.0/gotop_v4.2.0_linux_386.tgz
@@ -24,7 +26,7 @@ mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
 
 sudo apt install fzf
-$(brew --prefix)/opt/fzf/install
+
 curl -sS https://starship.rs/install.sh | sh
 
 sudo apt install tldr
