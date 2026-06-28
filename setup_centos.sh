@@ -62,7 +62,10 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
-sudo yum install -y neofetch
+# neofetch is not available in CentOS repositories, so install the script directly
+wget https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+sudo install -m 755 ./neofetch /usr/local/bin/neofetch
+rm ./neofetch
 
 
 # ==============================
