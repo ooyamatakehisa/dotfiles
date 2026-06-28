@@ -36,13 +36,24 @@ tar -xvzf ./eza_x86_64-unknown-linux-gnu.tar.gz
 sudo mv ./eza /usr/local/bin
 rm ./eza_x86_64-unknown-linux-gnu.tar.gz
 
-sudo yum install -y bat
+# bat is not available in CentOS repositories, so install the prebuilt binary
+wget https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz
+tar -xvzf ./bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz
+sudo mv ./bat-v0.26.1-x86_64-unknown-linux-musl/bat /usr/local/bin
+rm -rf ./bat-v0.26.1-x86_64-unknown-linux-musl ./bat-v0.26.1-x86_64-unknown-linux-musl.tar.gz
 
-sudo yum install -y fzf
+# fzf is not available in CentOS repositories, so install the prebuilt binary
+wget https://github.com/junegunn/fzf/releases/download/v0.73.1/fzf-0.73.1-linux_amd64.tar.gz
+tar -xvzf ./fzf-0.73.1-linux_amd64.tar.gz
+sudo mv ./fzf /usr/local/bin
+rm ./fzf-0.73.1-linux_amd64.tar.gz
 
 curl -sS https://starship.rs/install.sh | sh
 
-sudo yum install -y tldr
+# tldr is not available in CentOS repositories, so install the tealdeer client as tldr
+wget https://github.com/dbrgn/tealdeer/releases/download/v1.8.1/tealdeer-linux-x86_64-musl
+sudo install -m 755 ./tealdeer-linux-x86_64-musl /usr/local/bin/tldr
+rm ./tealdeer-linux-x86_64-musl
 
 # install zprezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
